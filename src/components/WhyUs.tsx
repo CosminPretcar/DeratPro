@@ -1,6 +1,6 @@
 export default function WhyUs() {
   return (
-    <section className="w-full py-16 bg-white relative">
+    <section id="whyus" className="w-full py-16 bg-white relative">
       <div className="max-w-7xl mx-auto px-6 space-y-12">
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <h2 className="text-3xl font-bold text-slate-900">De ce să ne alegi pe noi?</h2>

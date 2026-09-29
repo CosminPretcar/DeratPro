@@ -1,6 +1,6 @@
 export default function HowItWorks() {
   return (
-    <section className="w-full py-16 bg-slate-50 relative">
+    <section id="howitworks" className="w-full py-16 bg-slate-50 relative">
       <div className="max-w-7xl mx-auto px-6 space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <h2 className="text-3xl font-bold text-slate-900">Cum funcționează</h2>
