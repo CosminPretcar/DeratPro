@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0f2b48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Corp & bot soarece din profil -->
+  <path d="M2.5 17C2.5 13.5 5.5 11 9 11C13 11 17 13.5 17.5 17H2.5Z" />
+  <!-- Nas / varf profil -->
+  <circle cx="2" cy="16.5" r="0.8" fill="#10b981" stroke="#10b981" stroke-width="0.5" />
+  <!-- Ochi mic verde -->
+  <circle cx="5" cy="14" r="0.8" fill="#10b981" stroke="#10b981" stroke-width="0.5" />
+  <!-- Ureche rotunjita cu accent verde -->
+  <path d="M8 11.5C8 9 9.8 7 12 7C13.5 7 14.5 8 14.5 9.5C14.5 10.5 13.8 11.5 12.5 11.5" stroke="#10b981" />
+  <!-- Mustati subtile -->
+  <path d="M1 14.5L3.5 15.5" stroke-width="1.5" />
+  <path d="M1 18L3.5 17" stroke-width="1.5" />
+  <!-- Coada arcuita eleganta -->
+  <path d="M17.5 17C19.5 17 22 15.5 22 12C22 9.5 20.5 8.5 19.5 8.5" />
+</svg>

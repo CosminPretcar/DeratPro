@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0f2b48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Corp gandac vazut de sus - torace si abdomen -->
+  <ellipse cx="12" cy="14" rx="4.5" ry="5.5" />
+  <path d="M9 10C9 8.2 10.3 7 12 7C13.7 7 15 8.2 15 10" />
+  <!-- Linie despartire aripi cu accent verde pe centru -->
+  <line x1="12" y1="10" x2="12" y2="19.5" stroke="#10b981" />
+  <!-- Antene subtiri elegante -->
+  <path d="M10 7C9.5 4.5 7.5 3 6 2.5" stroke="#10b981" />
+  <path d="M14 7C14.5 4.5 16.5 3 18 2.5" stroke="#10b981" />
+  <!-- 6 Picioare articulate tehnic -->
+  <path d="M8 11L4.5 9.5" />
+  <path d="M16 11L19.5 9.5" />
+  <path d="M7.5 14L3.5 14.5" />
+  <path d="M16.5 14L20.5 14.5" />
+  <path d="M8 17L4.5 19.5" />
+  <path d="M16 17L19.5 19.5" />
+</svg>

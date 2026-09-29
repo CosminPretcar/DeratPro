@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0f2b48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Nucleu central virus/microb -->
+  <circle cx="12" cy="12" r="5" />
+  <!-- Puncte bio-active interne verzi -->
+  <circle cx="10.5" cy="11" r="0.8" fill="#10b981" stroke="#10b981" stroke-width="0.5" />
+  <circle cx="13.5" cy="13.5" r="0.8" fill="#10b981" stroke="#10b981" stroke-width="0.5" />
+  <!-- Raze/spiculi cu varfuri mici verzi dezinfectante -->
+  <path d="M12 7V3" />
+  <circle cx="12" cy="2.5" r="0.7" fill="#10b981" stroke="#10b981" stroke-width="0.5" />
+  <path d="M12 17V21" />
+  <circle cx="12" cy="21.5" r="0.7" fill="#10b981" stroke="#10b981" stroke-width="0.5" />
+  <path d="M7 12H3" />
+  <circle cx="2.5" cy="12" r="0.7" fill="#10b981" stroke="#10b981" stroke-width="0.5" />
+  <path d="M17 12H21" />
+  <circle cx="21.5" cy="12" r="0.7" fill="#10b981" stroke="#10b981" stroke-width="0.5" />
+  <!-- Spiculi diagonali -->
+  <path d="M8.5 8.5L5.5 5.5" stroke="#10b981" />
+  <path d="M15.5 15.5L18.5 18.5" stroke="#10b981" />
+  <path d="M15.5 8.5L18.5 5.5" stroke="#10b981" />
+  <path d="M8.5 15.5L5.5 18.5" stroke="#10b981" />
+</svg>

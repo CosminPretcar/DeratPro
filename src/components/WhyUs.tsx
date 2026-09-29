@@ -1,3 +1,8 @@
+import lightningIcon from "../assets/lightning-icon.svg";
+import leafIcon from "../assets/leaf-icon.svg";
+import workerIcon from "../assets/worker-icon.svg";
+import shieldIcon from "../assets/shield-icon.svg";
+
 export default function WhyUs() {
   return (
     <section id="whyus" className="w-full py-16 bg-white relative">
@@ -8,19 +13,35 @@ export default function WhyUs() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100">
-            <h3 className="text-lg font-bold text-slate-900 mb-2">⚡ Intervenție rapidă</h3>
+            {/* Containerul flex pune elementele pe același rând și le centrează vertical */}
+            <div className="flex items-center gap-3 mb-3">
+              <img src={lightningIcon} alt="Echipă mobilă" className="w-8 h-8" /> 
+              <h3 className="text-lg font-bold text-slate-900">Echipă mobilă</h3>
+            </div>
             <p className="text-slate-600 text-sm">Echipă mobilă gata de acțiune în maxim 60 de minute oriunde în oraș, echipată complet.</p>
           </div>
           <div className="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100">
-            <h3 className="text-lg font-bold text-slate-900 mb-2">🌱 Substanțe avizate</h3>
+            {/* Containerul flex pune elementele pe același rând și le centrează vertical */}
+            <div className="flex items-center gap-3 mb-3">
+              <img src={leafIcon} alt="Substanțe avizate" className="w-8 h-8" />
+              <h3 className="text-lg font-bold text-slate-900">Substanțe avizate</h3>
+            </div>
             <p className="text-slate-600 text-sm">Produse omologate de Ministerul Sănătății, biodegradabile și sigure pentru copii și animale.</p>
           </div>
           <div className="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100">
-            <h3 className="text-lg font-bold text-slate-900 mb-2">🧑‍🔬 Personal autorizat</h3>
+            {/* Containerul flex pune elementele pe același rând și le centrează vertical */}
+            <div className="flex items-center gap-3 mb-3">
+              <img src={workerIcon} alt="Personal autorizat" className="w-8 h-8" />
+              <h3 className="text-lg font-bold text-slate-900">Personal autorizat</h3>
+            </div>
             <p className="text-slate-600 text-sm">Tehnicieni calificați cu atestate DDD, pregătire chimică periodică și echipamente de protecție.</p>
           </div>
           <div className="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100">
-            <h3 className="text-lg font-bold text-slate-900 mb-2">🛡️ Garanția lucrării</h3>
+            {/* Containerul flex pune elementele pe același rând și le centrează vertical */}
+            <div className="flex items-center gap-3 mb-3">
+              <img src={shieldIcon} alt="Garanția lucrării" className="w-8 h-8" />
+              <h3 className="text-lg font-bold text-slate-900">Garanția lucrării</h3>
+            </div>
             <p className="text-slate-600 text-sm">Certificat de conformitate și re-intervenție gratuită dacă dăunătorii reapar în perioada de garanție.</p>
           </div>
         </div>

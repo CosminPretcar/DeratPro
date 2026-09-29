@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0f2b48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Scut de protectie (corespunzator formei din logoul DeratPro) -->
+  <path d="M12 2.5L20 6.5V12C20 17 16.5 20.8 12 22C7.5 20.8 4 17 4 12V6.5L12 2.5Z" />
+  <!-- Bifa verde de garantie in centru -->
+  <path d="M8.5 12.5L11 15L15.5 9.5" stroke="#10b981" stroke-width="2.5" />
+</svg>

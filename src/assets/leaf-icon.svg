@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0f2b48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Tulpina rasad / planta -->
+  <path d="M12 21V12" />
+  <!-- Frunza principala arcuita verde eco-sanitara -->
+  <path d="M12 12C12 7.5 15.5 4 20 4C20 8.5 16.5 12 12 12Z" stroke="#10b981" />
+  <path d="M12 12L17.5 6.5" stroke="#10b981" stroke-width="1.75" />
+  <!-- Frunzulita secundara / lastar stanga -->
+  <path d="M12 15C9.5 15 7.5 13 7.5 10.5C9.5 10.5 11.5 12 12 15Z" />
+  <!-- Sol sau baza circulara de crestere -->
+  <path d="M7 21C8.5 20.5 10 20.3 12 20.3C14 20.3 15.5 20.5 17 21" stroke="#10b981" />
+</svg>
