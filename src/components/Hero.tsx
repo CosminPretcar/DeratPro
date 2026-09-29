@@ -1,3 +1,5 @@
+import Hero3D from './Hero3D';
+
 export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden py-10 lg:py-24">
@@ -34,13 +36,14 @@ export default function Hero() {
           </div>
           
           <div className="lg:col-span-5 w-full mt-10 lg:mt-0">
-            <div className="relative w-full h-[380px] lg:h-[460px] rounded-xl bg-slate-50 flex flex-col items-center justify-center border-2 border-dashed border-slate-300">
-                <span className="text-3xl"></span>
+            <div className="relative w-full h-[380px] lg:h-[460px] rounded-xl bg-slate-50 shadow-inner flex overflow-hidden border border-slate-200">
+              <div className="absolute top-4 left-4 z-10 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 backdrop-blur-sm text-slate-600 font-semibold text-xs border border-slate-200 shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span>Sistem Scanare DDD</span>
               </div>
-              <p className="text-sm text-slate-500 mt-2 text-center px-4">
-                Placeholder for the Three.js animation.
-              </p>
+              <Hero3D />
             </div>
+          </div>
         </div>
       </div>
     </section>
