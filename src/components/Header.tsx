@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logo from '../assets/logo.svg';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,10 +22,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-200 shadow-sm transition-all">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <a href="#" onClick={(e) => handleScroll(e, 'top')} className="flex items-center gap-2">
-          <span className="text-2xl">🛡️</span>
-          <span className="text-2xl font-black text-slate-900 tracking-tight">
-            Derat<span className="text-green-600">Pro</span>
-          </span>
+          <img src={logo} alt="DeratPro Logo" className="h-12 w-auto pointer-events-none" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8 font-medium text-slate-600">
