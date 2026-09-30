@@ -12,12 +12,13 @@ export default function Contact() {
   const [errors, setErrors] = useState({
     name: '',
     phone: '',
-    email: ''
+    email: '',
+    message: ''
   });
 
   const validateForm = () => {
     let isValid = true;
-    const newErrors = { name: '', phone: '', email: '' };
+    const newErrors = { name: '', phone: '', email: '', message: '' };
 
     if (formData.name.trim().length < 3) {
       newErrors.name = "Acest câmp este obligatoriu. Te rugăm să introduci un nume.";
@@ -33,6 +34,11 @@ export default function Contact() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       newErrors.email = "Introdu o adresă de email validă.";
+      isValid = false;
+    }
+
+    if (formData.message.trim().length === 0) {
+      newErrors.message = "Te rugăm să ne oferi câteva detalii despre problemă.";
       isValid = false;
     }
 
@@ -148,10 +154,13 @@ export default function Contact() {
                     id="message"  
                     rows={4} 
                     placeholder="Descrie problema..." 
-                    className="w-full p-4 bg-slate-50 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 resize-y"
+                    className={`w-full p-4 bg-slate-50 border rounded-lg focus:outline-none focus:ring-2 resize-y transition-colors ${
+                      errors.message ? "border-red-500 focus:ring-red-500" : "border-slate-300 focus:ring-green-600"
+                    }`}
                     value={formData.message}
                     onChange={(e) => handleInputChange('message', e.target.value)}
                   ></textarea>
+                  {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                 </div>
                 
                 <button type="submit" className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-3 rounded-lg transition-colors cursor-pointer shadow-md">
