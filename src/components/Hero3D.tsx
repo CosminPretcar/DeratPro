@@ -34,9 +34,11 @@ function Scene() {
   const scannerGroupRef = useRef<THREE.Group>(null);
 
   const targets = useMemo(() => {
-    return Array.from({ length: 15 }).map(() => {
-      const x = (Math.random() - 0.5) * 6; 
-      const z = (Math.random() - 0.5) * 5; 
+    return Array.from({ length: 15 }, (_, index) => {
+      const column = index % 5;
+      const row = Math.floor(index / 5);
+      const x = (column - 2) * 1.2;
+      const z = (row - 1.5) * 1.4;
       return [x, 0.15, z] as [number, number, number];
     });
   }, []);
