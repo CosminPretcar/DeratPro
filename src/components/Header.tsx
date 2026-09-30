@@ -8,10 +8,14 @@ export default function Header() {
     e.preventDefault(); 
     setIsMenuOpen(false); 
 
+    if (targetId === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
     setTimeout(() => {
       const element = document.getElementById(targetId);
       if (element) {
-
         const y = element.getBoundingClientRect().top + window.scrollY - 80;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }

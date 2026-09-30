@@ -61,11 +61,19 @@ To ensure a highly consistent visual identity without relying on external UI lib
 > "I want to generate a series of minimalist SVG icons for a website. They must all strictly follow this style guide: 'line-art' design (outlines only), 2px stroke width, rounded corners, transparent background. Use exclusively dark blue (#0f2b48) for the main strokes and add small green accents (#10b981). The SVG code must be clean, using a viewBox="0 0 24 24"."
 
 **Iterative Subject Prompts:**
-*   **Brand Favicon:** "Generate a minimalist SVG icon specifically designed to be used as a website favicon. The design must represent a simple safety shield. Use a thick outline stroke of 3px or 4px (to remain clear at very small sizes) in dark blue (`#0f2b48`) and add a green visual accent (`#10b981`), such as a checkmark or a partial fill. No text, transparent background, clean code strictly using a `viewBox="0 0 24 24"`."
-*   **Rodent Control (Deratizare):** "Generate the icon in the same style representing a stylized mouse or rat, from a profile view."
-*   **Insect Control (Dezinsecție):** "Generate the icon representing a bug/roach seen from above, minimalist and technical, without disgusting details."
-*   **Disinfection (Dezinfecție):** "Generate the icon representing a molecule, a virus, or a bacteria with small spikes/rays."
-*   **Fast Intervention (Intervenție rapidă):** "Generate the icon representing a dynamic lightning bolt."
-*   **Approved Substances (Substanțe avizate):** "Generate the icon representing a leaf or a small seedling (plant)."
-*   **Authorized Personnel (Personal autorizat):** "Generate the icon representing an ID badge or the minimalist silhouette of a technician."
-*   **Work Guarantee (Garanția lucrării):** "Generate the icon representing a shield with a checkmark in the center."
+*   **Brand Favicon:** 
+>"Generate a minimalist SVG icon specifically designed to be used as a website favicon. The design must represent a simple safety shield. Use a thick outline stroke of 3px or 4px (to remain clear at very small sizes) in dark blue (`#0f2b48`) and add a green visual accent (`#10b981`), such as a checkmark or a partial fill. No text, transparent background, clean code strictly using a `viewBox="0 0 24 24"`."
+*   **Rodent Control (Deratizare):** 
+>"Generate the icon in the same style representing a stylized mouse or rat, from a profile view."
+*   **Insect Control (Dezinsecție):** >
+>"Generate the icon representing a bug/roach seen from above, minimalist and technical, without disgusting details."
+*   **Disinfection (Dezinfecție):** 
+>"Generate the icon representing a molecule, a virus, or a bacteria with small spikes/rays."
+*   **Fast Intervention (Intervenție rapidă):** 
+>"Generate the icon representing a dynamic lightning bolt."
+*   **Approved Substances (Substanțe avizate):** 
+>"Generate the icon representing a leaf or a small seedling (plant)."
+*   **Authorized Personnel (Personal autorizat):** 
+>"Generate the icon representing an ID badge or the minimalist silhouette of a technician."
+*   **Work Guarantee (Garanția lucrării):** 
+>"Generate the icon representing a shield with a checkmark in the center."

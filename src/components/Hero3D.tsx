@@ -3,6 +3,11 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Grid } from '@react-three/drei';
 import * as THREE from 'three';
 
+const targetScaleSmall = new THREE.Vector3(0.1, 0.1, 0.1);
+const targetScaleLarge = new THREE.Vector3(1, 1, 1);
+const colorGreen = new THREE.Color('#16a34a');
+const colorRed = new THREE.Color('#ef4444');
+
 function Target({ position, scannerXRef }: { position: [number, number, number], scannerXRef: { current: number } }) {
   const meshRef = useRef<THREE.Mesh>(null);
   const materialRef = useRef<THREE.MeshStandardMaterial>(null);
@@ -13,11 +18,11 @@ function Target({ position, scannerXRef }: { position: [number, number, number],
     const distance = Math.abs(position[0] - scannerXRef.current);
     
     if (distance < 0.4) {
-      meshRef.current.scale.lerp(new THREE.Vector3(0.1, 0.1, 0.1), 0.2);
-      materialRef.current.color.lerp(new THREE.Color('#16a34a'), 0.2);
+      meshRef.current.scale.lerp(targetScaleSmall, 0.2);
+      materialRef.current.color.lerp(colorGreen, 0.2);
     } else if (distance > 2) {
-      meshRef.current.scale.lerp(new THREE.Vector3(1, 1, 1), 0.05);
-      materialRef.current.color.lerp(new THREE.Color('#ef4444'), 0.05);
+      meshRef.current.scale.lerp(targetScaleLarge, 0.05);
+      materialRef.current.color.lerp(colorRed, 0.05);
     }
   });
 

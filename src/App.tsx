@@ -8,7 +8,7 @@ import Header from './components/Header'
 
 export default function App() {
   return (
-    <div id="top" className="min-h-screen flex bg-white flex-col font-sans pt-20">
+    <div className="min-h-screen flex bg-white flex-col font-sans pt-20">
       <Header />
       <Hero />
       <Services />
