@@ -7,11 +7,11 @@ The project is automatically deployed via GitHub Actions and can be accessed her
 **https://cosminpretcar.github.io/DeratPro/**
 
 ## Tech Stack
-* **Core:** React 18, TypeScript, Vite
-* **Styling:** Tailwind CSS (utility-first, fast, and consistent)
+* **Core:** React 19, TypeScript 6, Vite 8
+* **Styling:** Tailwind CSS 4 via the Vite plugin
 * **3D Graphics:** Three.js via `@react-three/fiber` and `@react-three/drei`
 * **Icons & Assets:** Custom SVG vector graphics, optimized for performance
-* **Infrastructure & CI/CD:** GitHub Pages, GitHub Actions (Automated Deployment)
+* **Infrastructure & CI/CD:** GitHub Pages with GitHub Actions
 
 ## Key Features
 1. **Interactive 3D Radar (Hero Section):** A custom-built 3D component illustrating the "scan and neutralize" process using a time-based sine wave algorithm for fluid animation.
@@ -22,7 +22,7 @@ The project is automatically deployed via GitHub Actions and can be accessed her
 ## Architecture & Technical Decisions
 * **Vite vs. CRA:** Chosen for its lightning-fast HMR and optimized builds, which are essential when dealing with large bundles like Three.js.
 * **Component Modularity:** Strict separation of concerns (e.g., separating `Hero3D` logic from the `Hero` UI) keeps the codebase clean, pure, and scalable.
-* **CI/CD Automation:** A `.github/workflows/deploy.yml` pipeline eliminates manual builds. Every push to the `main` branch triggers a clean install, build, and deployment process.
+* **CI/CD Automation:** `.github/workflows/deploy.yml` runs on pushes to `main`, uses Node.js 20, installs dependencies with `npm install`, builds with `npm run build`, and publishes `dist/` to GitHub Pages.
 
 ## Local Installation
 To run this project locally, follow these steps:
