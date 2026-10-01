@@ -4,6 +4,16 @@ import { useLanguage } from '../useLanguage';
 export default function Hero() {
   const { t } = useLanguage();
 
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+
+    if (contactSection) {
+      const y = contactSection.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative w-full overflow-hidden py-10 lg:py-24">
       <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-green-100/40 blur-3xl pointer-events-none"></div>
@@ -29,7 +39,7 @@ export default function Hero() {
             </p>
             
             <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-              <a className="inline-flex items-center justify-center gap-2 bg-green-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-green-700 transition-all" href="#contact">
+              <a className="inline-flex items-center justify-center gap-2 bg-green-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-green-700 transition-all" href="#contact" onClick={handleContactClick}>
                 <span>{t.hero.offer}</span>
               </a>
               <a className="inline-flex items-center justify-center gap-2 bg-slate-100 text-slate-900 hover:bg-slate-200 font-semibold px-6 py-3 rounded-lg shadow-sm transition-all" href="tel:0722000111">
