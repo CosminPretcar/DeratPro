@@ -18,10 +18,12 @@ The project is automatically deployed via GitHub Actions and can be accessed her
 2. **Custom Smooth Scrolling:** A sticky header with a backdrop-blur effect utilizing a custom JavaScript offset calculation to ensure precise navigation across all devices, bypassing native iOS/Safari anchor conflicts.
 3. **Responsive & Mobile-First Design:** Fluid layout based on the Tailwind grid system, including a mobile-friendly hamburger navigation menu.
 4. **SEO Optimized:** Complete metadata, Open Graph tags for social sharing, and semantic HTML5 architecture.
+5. **Romanian/English Localization:** A language switcher in the header translates the complete interface, including navigation, content sections, form labels, validation messages, and confirmation feedback. The selected language is persisted in `localStorage`.
 
 ## Architecture & Technical Decisions
 * **Vite vs. CRA:** Chosen for its lightning-fast HMR and optimized builds, which are essential when dealing with large bundles like Three.js.
 * **Component Modularity:** Strict separation of concerns (e.g., separating `Hero3D` logic from the `Hero` UI) keeps the codebase clean, pure, and scalable.
+* **Localization:** A shared language context keeps Romanian and English translations in one place, allowing all components to react to the same language selection without duplicating page layouts.
 * **CI/CD Automation:** `.github/workflows/deploy.yml` runs on pushes to `main`, uses Node.js 20, installs dependencies with `npm install`, builds with `npm run build`, and publishes `dist/` to GitHub Pages.
 
 ## Local Installation

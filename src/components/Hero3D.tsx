@@ -12,6 +12,7 @@ function Target({ position, scannerXRef }: { position: [number, number, number],
   const meshRef = useRef<THREE.Mesh>(null);
   const materialRef = useRef<THREE.MeshStandardMaterial>(null);
   
+  // Animate each target based on its distance from the moving scanner.
   useFrame(() => {
     if (!meshRef.current || !materialRef.current) return;
     
@@ -38,6 +39,7 @@ function Scene() {
   const scannerXRef = useRef(0);
   const scannerGroupRef = useRef<THREE.Group>(null);
 
+  // Generate the target grid once instead of recalculating it on every render.
   const targets = useMemo(() => {
     return Array.from({ length: 15 }, (_, index) => {
       const column = index % 5;
@@ -48,6 +50,7 @@ function Scene() {
     });
   }, []);
 
+  // Move the scanner continuously along the X axis using a sine wave.
   useFrame(({ clock }) => {
     scannerXRef.current = Math.sin(clock.elapsedTime * 1.5) * 3.5;
     if (scannerGroupRef.current) {

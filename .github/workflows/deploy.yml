@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout cod
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -21,13 +21,13 @@ jobs:
         with:
           node-version: 20
 
-      - name: Instalează dependențele
+      - name: Install dependencies
         run: npm install
 
-      - name: Construiește proiectul (Build)
+      - name: Build project
         run: npm run build
 
-      - name: Publică pe GitHub Pages
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

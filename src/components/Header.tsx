@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import logo from '../assets/logo.svg';
+import { useLanguage } from '../useLanguage';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
+  // Compensate for the fixed header when scrolling to an anchored section.
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault(); 
     setIsMenuOpen(false); 
@@ -30,14 +33,18 @@ export default function Header() {
         </a>
 
         <nav className="hidden md:flex items-center gap-8 font-medium text-slate-600">
-          <a href="#services" onClick={(e) => handleScroll(e, 'services')} className="hover:text-green-600 transition-colors cursor-pointer">Servicii</a>
-          <a href="#whyus" onClick={(e) => handleScroll(e, 'whyus')} className="hover:text-green-600 transition-colors cursor-pointer">De ce noi?</a>
-          <a href="#howitworks" onClick={(e) => handleScroll(e, 'howitworks')} className="hover:text-green-600 transition-colors cursor-pointer">Cum funcționează</a>
+          <a href="#services" onClick={(e) => handleScroll(e, 'services')} className="hover:text-green-600 transition-colors cursor-pointer">{t.nav.services}</a>
+          <a href="#whyus" onClick={(e) => handleScroll(e, 'whyus')} className="hover:text-green-600 transition-colors cursor-pointer">{t.nav.whyUs}</a>
+          <a href="#howitworks" onClick={(e) => handleScroll(e, 'howitworks')} className="hover:text-green-600 transition-colors cursor-pointer">{t.nav.howItWorks}</a>
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-4">
+          <div className="flex items-center rounded-lg border border-slate-200 p-1 text-xs font-bold">
+            <button type="button" onClick={() => setLanguage('ro')} className={`rounded-md px-2 py-1 ${language === 'ro' ? 'bg-green-600 text-white' : 'text-slate-500'}`} aria-pressed={language === 'ro'}>RO</button>
+            <button type="button" onClick={() => setLanguage('en')} className={`rounded-md px-2 py-1 ${language === 'en' ? 'bg-green-600 text-white' : 'text-slate-500'}`} aria-pressed={language === 'en'}>EN</button>
+          </div>
           <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="bg-green-600 text-white px-6 py-2.5 rounded-lg font-bold hover:bg-green-700 transition-colors shadow-sm cursor-pointer">
-            Cere Ofertă
+            {t.nav.offer}
           </a>
         </div>
 
@@ -58,11 +65,15 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
           <div className="flex flex-col px-6 py-4 space-y-4 font-medium text-slate-600">
-            <a href="#services" onClick={(e) => handleScroll(e, 'services')} className="hover:text-green-600 block">Servicii</a>
-            <a href="#whyus" onClick={(e) => handleScroll(e, 'whyus')} className="hover:text-green-600 block">De ce noi?</a>
-            <a href="#howitworks" onClick={(e) => handleScroll(e, 'howitworks')} className="hover:text-green-600 block">Cum funcționează</a>
+            <div className="flex items-center gap-2 border-b border-slate-100 pb-4 text-xs font-bold">
+              <button type="button" onClick={() => setLanguage('ro')} className={`rounded-md border px-3 py-1 ${language === 'ro' ? 'border-green-600 bg-green-600 text-white' : 'border-slate-200 text-slate-500'}`} aria-pressed={language === 'ro'}>RO</button>
+              <button type="button" onClick={() => setLanguage('en')} className={`rounded-md border px-3 py-1 ${language === 'en' ? 'border-green-600 bg-green-600 text-white' : 'border-slate-200 text-slate-500'}`} aria-pressed={language === 'en'}>EN</button>
+            </div>
+            <a href="#services" onClick={(e) => handleScroll(e, 'services')} className="hover:text-green-600 block">{t.nav.services}</a>
+            <a href="#whyus" onClick={(e) => handleScroll(e, 'whyus')} className="hover:text-green-600 block">{t.nav.whyUs}</a>
+            <a href="#howitworks" onClick={(e) => handleScroll(e, 'howitworks')} className="hover:text-green-600 block">{t.nav.howItWorks}</a>
             <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="text-green-600 font-bold block pt-2 border-t border-slate-100">
-              Cere Ofertă
+              {t.nav.offer}
             </a>
           </div>
         </div>
