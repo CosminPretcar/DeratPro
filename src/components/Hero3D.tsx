@@ -1,4 +1,4 @@
-import { useRef, useMemo } from 'react';
+import { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Grid } from '@react-three/drei';
 import * as THREE from 'three';
@@ -7,6 +7,17 @@ const targetScaleSmall = new THREE.Vector3(0.1, 0.1, 0.1);
 const targetScaleLarge = new THREE.Vector3(1, 1, 1);
 const colorGreen = new THREE.Color('#16a34a');
 const colorRed = new THREE.Color('#ef4444');
+type TargetPosition = [number, number, number];
+
+function createRandomTargets(): TargetPosition[] {
+  return Array.from({ length: 15 }, () => {
+    const x = Math.random() * 9.6 - 4.8;
+    const z = Math.random() * 7.5 - 3.75;
+    return [x, 0.15, z];
+  });
+}
+
+const randomTargets = createRandomTargets();
 
 function Target({ position, scannerXRef }: { position: [number, number, number], scannerXRef: { current: number } }) {
   const meshRef = useRef<THREE.Mesh>(null);
@@ -38,17 +49,7 @@ function Target({ position, scannerXRef }: { position: [number, number, number],
 function Scene() {
   const scannerXRef = useRef(0);
   const scannerGroupRef = useRef<THREE.Group>(null);
-
-  // Generate the target grid once instead of recalculating it on every render.
-  const targets = useMemo(() => {
-    return Array.from({ length: 15 }, (_, index) => {
-      const column = index % 5;
-      const row = Math.floor(index / 5);
-      const x = (column - 2) * 1.2;
-      const z = (row - 1.5) * 1.4;
-      return [x, 0.15, z] as [number, number, number];
-    });
-  }, []);
+  const targets = randomTargets;
 
   // Move the scanner continuously along the X axis using a sine wave.
   useFrame(({ clock }) => {
