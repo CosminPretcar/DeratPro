@@ -8,11 +8,13 @@ const targetScaleLarge = new THREE.Vector3(1, 1, 1);
 const colorGreen = new THREE.Color('#16a34a');
 const colorRed = new THREE.Color('#ef4444');
 type TargetPosition = [number, number, number];
+const spawnAreaSize = 4;
+const spawnAreaHalfSize = spawnAreaSize / 2;
 
 function createRandomTargets(): TargetPosition[] {
   return Array.from({ length: 15 }, () => {
-    const x = Math.random() * 9.6 - 4.8;
-    const z = Math.random() * 7.5 - 3.75;
+    const x = Math.random() * spawnAreaSize - spawnAreaHalfSize;
+    const z = Math.random() * spawnAreaSize - spawnAreaHalfSize;
     return [x, 0.15, z];
   });
 }
@@ -40,7 +42,7 @@ function Target({ position, scannerXRef }: { position: [number, number, number],
 
   return (
     <mesh ref={meshRef} position={position}>
-      <boxGeometry args={[0.3, 0.3, 0.3]} />
+      <sphereGeometry args={[0.2, 16, 16]} />
       <meshStandardMaterial ref={materialRef} color="#ef4444" />
     </mesh>
   );
